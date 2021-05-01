@@ -1,0 +1,157 @@
+        else:
+            TextSurfMon1, TextRectMon1, TextSurfMon2, TextRectMon2, TextSurfMon3, TextRectMon3 = updateMontones(listaPiedras, color)
+            for event in pygame.event.get():
+                if event.type == QUIT:
+                    pygame.quit()
+                    sys.exit(0)
+
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    mouse_pos = event.pos  # gets mouse position
+                    # checks if mouse position is over the button
+                    if monton1.collidepoint(mouse_pos):
+                        counterMonton1, banderasMontones[0] = actionMonton1(listaPiedras[0], counterMonton1, bandsMonton1)
+
+                    if monton2.collidepoint(mouse_pos):
+                        counterMonton2, banderasMontones[1] = actionMonton2(listaPiedras[1], counterMonton2, bandsMonton2)
+
+                    if not isinstance(listaPiedras[2], str):
+                        if monton3.collidepoint(mouse_pos):
+                            counterMonton3, banderasMontones[2] = actionMonton3(listaPiedras[2], counterMonton3, bandsMonton3)
+
+                        if mon3_button1.collidepoint(mouse_pos):
+                            nodoActual, listaPiedras = updateGame(3, -1, listaPiedras, arbolito, nodoActual)
+                            TextSurfName, TextRectName, game = turn(nombres, game)
+                            counterMonton3 = counterPlus(counterMonton3)
+                            for index, textos2 in enumerate(textos):
+                                for index2, texto in enumerate(textos2):
+                                    bandsMontones[index][index2] = False
+                        if mon3_button2.collidepoint(mouse_pos):
+                            nodoActual, listaPiedras = updateGame(3, -2, listaPiedras, arbolito, nodoActual)
+                            TextSurfName, TextRectName, game = turn(nombres, game)
+                            counterMonton3 = counterPlus(counterMonton3)
+                            for index, textos2 in enumerate(textos):
+                                for index2, texto in enumerate(textos2):
+                                    bandsMontones[index][index2] = False
+                        if mon3_button3.collidepoint(mouse_pos):
+                            nodoActual, listaPiedras = updateGame(3, -3, listaPiedras, arbolito, nodoActual)
+                            TextSurfName, TextRectName, game = turn(nombres, game)
+                            counterMonton3 = counterPlus(counterMonton3)
+                            for index, textos2 in enumerate(textos):
+                                for index2, texto in enumerate(textos2):
+                                    bandsMontones[index][index2] = False
+                        if mon3_button4.collidepoint(mouse_pos):
+                            nodoActual, listaPiedras = updateGame(3, -4, listaPiedras, arbolito, nodoActual)
+                            TextSurfName, TextRectName, game = turn(nombres, game)
+                            counterMonton3 = counterPlus(counterMonton3)
+                            for index, textos2 in enumerate(textos):
+                                for index2, texto in enumerate(textos2):
+                                    bandsMontones[index][index2] = False
+                        if mon3_button5.collidepoint(mouse_pos):
+                            nodoActual, listaPiedras = updateGame(3, -5, listaPiedras, arbolito, nodoActual)
+                            TextSurfName, TextRectName, game = turn(nombres, game)
+                            counterMonton3 = counterPlus(counterMonton3)
+                            for index, textos2 in enumerate(textos):
+                                for index2, texto in enumerate(textos2):
+                                    bandsMontones[index][index2] = False
+
+                    if mon1_button1.collidepoint(mouse_pos):
+                        nodoActual, listaPiedras = updateGame(1, -1, listaPiedras, arbolito, nodoActual)
+                        TextSurfName, TextRectName, game = turn(nombres, game)
+                        counterMonton1 = counterPlus(counterMonton1)
+                        for index, textos2 in enumerate(textos):
+                            for index2, texto in enumerate(textos2):
+                                bandsMontones[index][index2] = False
+                    if mon1_button2.collidepoint(mouse_pos):
+                        nodoActual, listaPiedras = updateGame(1, -2, listaPiedras, arbolito, nodoActual)
+                        TextSurfName, TextRectName, game = turn(nombres, game)
+                        counterMonton1 = counterPlus(counterMonton1)
+                        for index, textos2 in enumerate(textos):
+                            for index2, texto in enumerate(textos2):
+                                bandsMontones[index][index2] = False
+                    if mon1_button3.collidepoint(mouse_pos):
+                        nodoActual, listaPiedras = updateGame(1, -3, listaPiedras, arbolito, nodoActual)
+                        TextSurfName, TextRectName, game = turn(nombres, game)
+                        counterMonton1 = counterPlus(counterMonton1)
+                        for index, textos2 in enumerate(textos):
+                            for index2, texto in enumerate(textos2):
+                                bandsMontones[index][index2] = False
+                    if mon1_button4.collidepoint(mouse_pos):
+                        nodoActual, listaPiedras = updateGame(1, -4, listaPiedras, arbolito, nodoActual)
+                        TextSurfName, TextRectName, game = turn(nombres, game)
+                        counterMonton1 = counterPlus(counterMonton1)
+                        for index, textos2 in enumerate(textos):
+                            for index2, texto in enumerate(textos2):
+                                bandsMontones[index][index2] = False
+                    if mon1_button5.collidepoint(mouse_pos):
+                        nodoActual, listaPiedras = updateGame(1, -5, listaPiedras, arbolito, nodoActual)
+                        TextSurfName, TextRectName, game = turn(nombres, game)
+                        counterMonton1 = counterPlus(counterMonton1)
+                        for index, textos2 in enumerate(textos):
+                            for index2, texto in enumerate(textos2):
+                                bandsMontones[index][index2] = False
+                    if mon2_button1.collidepoint(mouse_pos):
+                        nodoActual, listaPiedras = updateGame(2, -1, listaPiedras, arbolito, nodoActual)
+                        TextSurfName, TextRectName, game = turn(nombres, game)
+                        counterMonton2 = counterPlus(counterMonton2)
+                        for index, textos2 in enumerate(textos):
+                            for index2, texto in enumerate(textos2):
+                                bandsMontones[index][index2] = False
+                    if mon2_button2.collidepoint(mouse_pos):
+                        nodoActual, listaPiedras = updateGame(2, -2, listaPiedras, arbolito, nodoActual)
+                        TextSurfName, TextRectName, game = turn(nombres, game)
+                        counterMonton2 = counterPlus(counterMonton2)
+                        for index, textos2 in enumerate(textos):
+                            for index2, texto in enumerate(textos2):
+                                bandsMontones[index][index2] = False
+                    if mon2_button3.collidepoint(mouse_pos):
+                        nodoActual, listaPiedras = updateGame(2, -3, listaPiedras, arbolito, nodoActual)
+                        TextSurfName, TextRectName, game = turn(nombres, game)
+                        counterMonton2 = counterPlus(counterMonton2)
+                        for index, textos2 in enumerate(textos):
+                            for index2, texto in enumerate(textos2):
+                                bandsMontones[index][index2] = False
+                    if mon2_button4.collidepoint(mouse_pos):
+                        nodoActual, listaPiedras = updateGame(2, -4, listaPiedras, arbolito, nodoActual)
+                        TextSurfName, TextRectName, game = turn(nombres, game)
+                        counterMonton2 = counterPlus(counterMonton2)
+                        for index, textos2 in enumerate(textos):
+                            for index2, texto in enumerate(textos2):
+                                bandsMontones[index][index2] = False
+                    if mon2_button5.collidepoint(mouse_pos):
+                        nodoActual, listaPiedras = updateGame(2, -5, listaPiedras, arbolito, nodoActual)
+                        TextSurfName, TextRectName, game = turn(nombres, game)
+                        counterMonton2 = counterPlus(counterMonton2)
+                        for index, textos2 in enumerate(textos):
+                            for index2, texto in enumerate(textos2):
+                                bandsMontones[index][index2] = False
+
+            pantalla.fill((30, 30, 30))
+
+            pygame.draw.rect(pantalla, color["blanco"], monton1)
+            pygame.draw.rect(pantalla, color["blanco"], monton2)
+
+            pantalla.blit(TextSurfMon1, TextRectMon1)
+            pantalla.blit(TextSurfMon2, TextRectMon2)
+            pantalla.blit(TextSurfTurn, TextRectTurn)
+            pantalla.blit(TextSurfName, TextRectName)
+
+            for index, buttons in enumerate(botones): ##########
+                if banderasMontones[index] == True:
+                    for index2, button in enumerate(buttons):
+                        if bandsMontones[index][index2] == True:
+                            pygame.draw.rect(pantalla, (255, 248, 224), button)
+
+            for index, textos2 in enumerate(textos): ##########
+                if banderasMontones[index] == True:
+                    for index2, texto in enumerate(textos2):
+                        if bandsMontones[index][index2] == True:
+                            pantalla.blit(texto[0], texto[1])
+
+            if not isinstance(listaPiedras[2], str):
+                pygame.draw.rect(pantalla, color["blanco"], monton3)
+                pantalla.blit(TextSurfMon3, TextRectMon3)
+
+            checkIfWins(listaPiedras, pantalla, color, nombres)
+
+            pygame.display.flip()
+            reloj.tick(30)
